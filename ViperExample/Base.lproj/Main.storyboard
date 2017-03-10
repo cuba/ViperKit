@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ViperExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMn-Nq-Ttx">
+                                <rect key="frame" x="155" y="28" width="65" height="30"/>
+                                <state key="normal" title="REPLACE"/>
+                                <connections>
+                                    <action selector="replaceAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WAH-e6-o7m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qng-MG-ZoA">
+                                <rect key="frame" x="152" y="104" width="71" height="30"/>
+                                <state key="normal" title="NAVIGATE"/>
+                                <connections>
+                                    <action selector="navigateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pbg-n1-u3e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohn-pI-De6">
+                                <rect key="frame" x="154" y="66" width="66" height="30"/>
+                                <state key="normal" title="PRESENT"/>
+                                <connections>
+                                    <action selector="presentAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ShD-SI-UgQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9X-9i-Tmx">
+                                <rect key="frame" x="110" y="591" width="156" height="30"/>
+                                <state key="normal" title="PERFORM LONG TASK"/>
+                                <connections>
+                                    <action selector="performLongTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VDv-ay-RxL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYB-he-mhm">
+                                <rect key="frame" x="62" y="629" width="251" height="30"/>
+                                <state key="normal" title="PERFORM LONG TASK WITH ERROR"/>
+                                <connections>
+                                    <action selector="performLongTaskWithError:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GLl-20-xTZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vw9-oF-iPd">
+                                <rect key="frame" x="187.5" y="576" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GMn-Nq-Ttx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="5vh-KN-oVb"/>
+                            <constraint firstItem="ohn-pI-De6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CUL-AE-978"/>
+                            <constraint firstItem="H9X-9i-Tmx" firstAttribute="top" secondItem="vw9-oF-iPd" secondAttribute="bottom" constant="15" id="GWA-mQ-k0c"/>
+                            <constraint firstItem="qng-MG-ZoA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NYm-y8-DOd"/>
+                            <constraint firstItem="ohn-pI-De6" firstAttribute="top" secondItem="GMn-Nq-Ttx" secondAttribute="bottom" constant="8" id="XQg-GA-BFR"/>
+                            <constraint firstItem="pYB-he-mhm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hRK-Kb-tqJ"/>
+                            <constraint firstItem="qng-MG-ZoA" firstAttribute="top" secondItem="ohn-pI-De6" secondAttribute="bottom" constant="8" id="ils-rb-6cN"/>
+                            <constraint firstItem="GMn-Nq-Ttx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lLm-lr-MpV"/>
+                            <constraint firstItem="vw9-oF-iPd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mvg-24-w33"/>
+                            <constraint firstItem="pYB-he-mhm" firstAttribute="top" secondItem="H9X-9i-Tmx" secondAttribute="bottom" constant="8" id="uH7-IK-ZAM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pYB-he-mhm" secondAttribute="bottom" constant="8" id="v3O-6o-rBQ"/>
+                            <constraint firstItem="H9X-9i-Tmx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wGh-X3-yQs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="navigateButton" destination="qng-MG-ZoA" id="MFy-3b-9CX"/>
+                        <outlet property="presentButton" destination="ohn-pI-De6" id="6Wl-KY-bNa"/>
+                        <outlet property="replaceButton" destination="GMn-Nq-Ttx" id="ASo-ho-l1P"/>
+                        <outlet property="tasksLabel" destination="vw9-oF-iPd" id="koO-9i-gVB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
