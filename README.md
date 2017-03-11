@@ -32,43 +32,14 @@ class SomePresenter: ViperPresenter<ViewController> {
 
 Create your own router
 ```swift
-class SomeRouter: ViperRouter {
-    var viewController: ViewController
-    
-    func navigateTo(_ viewController: UIViewController, animated: Bool) {
-        if let navigationController = viewController?.navigationController {
-            navigationController.pushViewController(viewController, animated: animated)
-        }
-    }
-    
-    func navigateBack(animated: Bool) {
-        let _ = viewController?.navigationController?.popViewController(animated: animated)
-    }
-    
-    func dismiss(animated: Bool, completion: (() -> Void)?) {
-        viewController.dismiss(animated: animated, completion: completion)
-    }
-    
+class SomeRouter: ViperRouter<ViewController> {
     func replace(_ viewController: UIViewController, options: UIViewAnimationOptions) {
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
+            // This assumes your appDelegate has the public method 'replace'
+            // Which is responsible for replacing the current view with another one
             appDelegate.replace(viewController, options: options)
         }
     }
-}
-```
-
-Or use your ViewController as your router
-
-```swift
-extension ViewController: ViperRouter {
-    func replace(_ viewController: UIViewController, options: UIViewAnimationOptions) {
-        if let delegate = UIApplication.shared.delegate as? AppDelegate {
-            delegate.replace(viewController, options: options)
-        }
-    }
-    
-    // ViperViewController already implements the default behaviours of the other
-    // router methods
 }
 ```
 
@@ -79,8 +50,8 @@ class SomeInteractor: ViperInteractor {
     var router: SomeRouter
     
     init(_ viewController: ViewController) {
-        presenter = SamplePresenter(viewController)
-        router = viewController
+        presenter = SomePresenter(viewController)
+        router = SomeRouter(viewController)
     }
 }
 ```
