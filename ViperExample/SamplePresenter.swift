@@ -10,11 +10,15 @@ import Foundation
 import ViperKit
 
 class SamplePresenter: ViperPresenter<ViewController> {
-    init(_ viewController: ViewController) {
-        super.init(view: viewController)
-    }
-    
     func showActivityCount(count: Int) {
         view?.showActivityCount(count: count)
+    }
+    
+    func showActivityIndicator() {
+        view?.showActivityIndicator()
+    }
+    
+    func hideActivityIndicator() {
+        view?.hideActivityIndicator()
     }
 }

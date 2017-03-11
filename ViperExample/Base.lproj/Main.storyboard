@@ -57,11 +57,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vw9-oF-iPd">
-                                <rect key="frame" x="187.5" y="576" width="0.0" height="0.0"/>
+                                <rect key="frame" x="188" y="576" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="wz6-6s-jVh">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -71,7 +74,9 @@
                             <constraint firstItem="qng-MG-ZoA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NYm-y8-DOd"/>
                             <constraint firstItem="ohn-pI-De6" firstAttribute="top" secondItem="GMn-Nq-Ttx" secondAttribute="bottom" constant="8" id="XQg-GA-BFR"/>
                             <constraint firstItem="pYB-he-mhm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hRK-Kb-tqJ"/>
+                            <constraint firstItem="wz6-6s-jVh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iHd-AL-UXs"/>
                             <constraint firstItem="qng-MG-ZoA" firstAttribute="top" secondItem="ohn-pI-De6" secondAttribute="bottom" constant="8" id="ils-rb-6cN"/>
+                            <constraint firstItem="wz6-6s-jVh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jil-PD-HIk"/>
                             <constraint firstItem="GMn-Nq-Ttx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lLm-lr-MpV"/>
                             <constraint firstItem="vw9-oF-iPd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mvg-24-w33"/>
                             <constraint firstItem="pYB-he-mhm" firstAttribute="top" secondItem="H9X-9i-Tmx" secondAttribute="bottom" constant="8" id="uH7-IK-ZAM"/>
@@ -80,6 +85,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="wz6-6s-jVh" id="0aD-iU-3ed"/>
                         <outlet property="navigateButton" destination="qng-MG-ZoA" id="MFy-3b-9CX"/>
                         <outlet property="presentButton" destination="ohn-pI-De6" id="6Wl-KY-bNa"/>
                         <outlet property="replaceButton" destination="GMn-Nq-Ttx" id="ASo-ho-l1P"/>

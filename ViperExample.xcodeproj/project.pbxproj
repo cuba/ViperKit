@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C3965951E737C3C00312D9E /* SampleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C3965941E737C3B00312D9E /* SampleRouter.swift */; };
 		8CA709EC1E72102100FF78CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA709EB1E72102100FF78CB /* AppDelegate.swift */; };
 		8CA709EE1E72102100FF78CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA709ED1E72102100FF78CB /* ViewController.swift */; };
 		8CA709F11E72102100FF78CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CA709EF1E72102100FF78CB /* Main.storyboard */; };
@@ -75,6 +76,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8C3965941E737C3B00312D9E /* SampleRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleRouter.swift; sourceTree = "<group>"; };
 		8CA709E81E72102100FF78CB /* ViperExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CA709EB1E72102100FF78CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CA709ED1E72102100FF78CB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				8CA70A441E723FEC00FF78CB /* SampleAssembly.swift */,
 				8CA70A401E722D6A00FF78CB /* SampleInteractor.swift */,
 				8CA70A421E722E0E00FF78CB /* SamplePresenter.swift */,
+				8C3965941E737C3B00312D9E /* SampleRouter.swift */,
 				8CA709ED1E72102100FF78CB /* ViewController.swift */,
 				8CA709EF1E72102100FF78CB /* Main.storyboard */,
 				8CA709F21E72102100FF78CB /* Assets.xcassets */,
@@ -351,6 +354,7 @@
 				8CA709EE1E72102100FF78CB /* ViewController.swift in Sources */,
 				8CA70A491E724E2B00FF78CB /* SampleTaskDispatcher.swift in Sources */,
 				8CA70A411E722D6A00FF78CB /* SampleInteractor.swift in Sources */,
+				8C3965951E737C3C00312D9E /* SampleRouter.swift in Sources */,
 				8CA70A431E722E0E00FF78CB /* SamplePresenter.swift in Sources */,
 				8CA709EC1E72102100FF78CB /* AppDelegate.swift in Sources */,
 				8CA70A451E723FEC00FF78CB /* SampleAssembly.swift in Sources */,

@@ -8,9 +8,24 @@
 
 import Foundation
 
-public protocol ViperRouter {
-    func navigateTo(_ viewController: UIViewController, animated: Bool)
-    func navigateBack(animated: Bool)
-    func replace(_ viewController: UIViewController, options: UIViewAnimationOptions)
-    func dismiss(animated: Bool, completion: (() -> Void)?)
+open class ViperRouter<V: UIViewController> {
+    open var viewController: V?
+    
+    public init(_ viewController: V) {
+        self.viewController = viewController
+    }
+    
+    open func navigateTo(_ viewControllerToPresent: UIViewController, animated: Bool) {
+        if let navigationController = viewController?.navigationController {
+            navigationController.pushViewController(viewControllerToPresent, animated: animated)
+        }
+    }
+    
+    open func navigateBack(animated: Bool) {
+        let _ = viewController?.navigationController?.popViewController(animated: animated)
+    }
+    
+    open func dismiss(animated: Bool, completion: (() -> Void)?) {
+        viewController?.dismiss(animated: animated, completion: completion)
+    }
 }

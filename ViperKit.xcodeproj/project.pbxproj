@@ -15,7 +15,6 @@
 		8CA709BD1E71D6F800FF78CB /* ViperPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA709BC1E71D6F800FF78CB /* ViperPresenter.swift */; };
 		8CA709BF1E71D71300FF78CB /* ViperRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA709BE1E71D71300FF78CB /* ViperRouter.swift */; };
 		8CA709CD1E71E53400FF78CB /* ViperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA709CC1E71E53400FF78CB /* ViperViewController.swift */; };
-		8CA709CF1E71E5C000FF78CB /* ViperActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA709CE1E71E5C000FF78CB /* ViperActivityIndicator.swift */; };
 		8CA709D91E7207A400FF78CB /* ViperTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA709D81E7207A400FF78CB /* ViperTableViewController.swift */; };
 		8CA709DB1E7207CA00FF78CB /* ViperCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CA709DA1E7207CA00FF78CB /* ViperCollectionViewController.swift */; };
 /* End PBXBuildFile section */
@@ -42,7 +41,6 @@
 		8CA709BC1E71D6F800FF78CB /* ViperPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperPresenter.swift; sourceTree = "<group>"; };
 		8CA709BE1E71D71300FF78CB /* ViperRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperRouter.swift; sourceTree = "<group>"; };
 		8CA709CC1E71E53400FF78CB /* ViperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperViewController.swift; sourceTree = "<group>"; };
-		8CA709CE1E71E5C000FF78CB /* ViperActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperActivityIndicator.swift; sourceTree = "<group>"; };
 		8CA709D81E7207A400FF78CB /* ViperTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperTableViewController.swift; sourceTree = "<group>"; };
 		8CA709DA1E7207CA00FF78CB /* ViperCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,7 +87,6 @@
 			children = (
 				8CA709DE1E72081400FF78CB /* Viper */,
 				8CA709DD1E72080800FF78CB /* ViewControllers */,
-				8CA709DC1E72080100FF78CB /* Views */,
 				8CA7099F1E71D63300FF78CB /* ViperKit.h */,
 				8CA709A01E71D63300FF78CB /* Info.plist */,
 			);
@@ -103,14 +100,6 @@
 				8CA709AC1E71D63300FF78CB /* Info.plist */,
 			);
 			path = ViperKitTests;
-			sourceTree = "<group>";
-		};
-		8CA709DC1E72080100FF78CB /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				8CA709CE1E71E5C000FF78CB /* ViperActivityIndicator.swift */,
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 		8CA709DD1E72080800FF78CB /* ViewControllers */ = {
@@ -254,7 +243,6 @@
 				8CA709DB1E7207CA00FF78CB /* ViperCollectionViewController.swift in Sources */,
 				8CA709B91E71D6CF00FF78CB /* ViperInteractor.swift in Sources */,
 				8CA709D91E7207A400FF78CB /* ViperTableViewController.swift in Sources */,
-				8CA709CF1E71E5C000FF78CB /* ViperActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

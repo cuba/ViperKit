@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 open class ViperCollectionViewController: UICollectionViewController, ViperView {
-    private lazy var activityIndicator = ViperActivityIndicator()
     open var interactor: ViperInteractor?
     
     open override func viewDidLoad() {
@@ -36,33 +35,5 @@ open class ViperCollectionViewController: UICollectionViewController, ViperView 
     open override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         interactor?.viewDidDisappear()
-    }
-    
-    open func showActivityIndicator() {
-        if !activityIndicator.isAnimating {
-            self.view.addSubview(self.activityIndicator)
-            self.activityIndicator.startAnimating()
-        }
-    }
-    
-    open func hideActivityIndicator() {
-        self.activityIndicator.stopAnimating()
-        self.activityIndicator.removeFromSuperview()
-    }
-    
-    open func navigateTo(_ viewController: UIViewController, animated: Bool) {
-        if let navigationController = self.navigationController {
-            navigationController.pushViewController(viewController, animated: animated)
-        } else {
-            present(viewController, animated: animated, completion: nil)
-        }
-    }
-    
-    open func navigateBack(animated: Bool) {
-        let _ = navigationController?.popViewController(animated: animated)
-    }
-    
-    open func replace(_ viewController: UIViewController, options: UIViewAnimationOptions) {
-        // Nothing
     }
 }

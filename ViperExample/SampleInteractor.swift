@@ -12,7 +12,7 @@ import ViperKit
 class SampleInteractor: ViperInteractor {
     static let colors:[UIColor] = [UIColor.white, UIColor.green, UIColor.red, UIColor.cyan]
     var presenter: SamplePresenter
-    var router: ViperRouter?
+    var router: SampleRouter
     
     var currentColorIndex = 0 {
         didSet {
@@ -45,7 +45,7 @@ class SampleInteractor: ViperInteractor {
     
     init(_ viewController: ViewController) {
         presenter = SamplePresenter(viewController)
-        router = viewController
+        router = SampleRouter(viewController)
     }
     
     override func viewWillAppear() {
@@ -63,13 +63,13 @@ class SampleInteractor: ViperInteractor {
     
     func performReplace() {
         let viewController = SampleAssembly.createSampleViewController()
-        router?.replace(viewController, options: .transitionFlipFromLeft)
+        router.replace(viewController, options: .transitionFlipFromLeft)
     }
     
     func performNavigate() {
         let viewController = SampleAssembly.createSampleViewController()
         viewController.sampleInteractor?.currentColorIndex = currentColorIndex
-        router?.navigateTo(viewController, animated: true)
+        router.navigateTo(viewController, animated: true)
     }
     
     func performLongTask() {
@@ -85,7 +85,7 @@ class SampleInteractor: ViperInteractor {
     }
     
     @objc func closeWindow() {
-        router?.dismiss(animated: true, completion: nil)
+        router.dismiss(animated: true, completion: nil)
     }
     
     open func successHandlerWrapper<R>(_ successHandler: @escaping (R) -> Void) -> (R?, Error?) ->Void {

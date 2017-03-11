@@ -10,6 +10,4 @@ import Foundation
 
 public protocol ViperView {
     func present(_ viewController: UIViewController, animated: Bool, completion: (() -> Swift.Void)?)
-    func showActivityIndicator()
-    func hideActivityIndicator()
 }

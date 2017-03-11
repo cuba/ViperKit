@@ -9,11 +9,12 @@
 import UIKit
 import ViperKit
 
-class ViewController: ViperViewController, ViperRouter {
+class ViewController: ViperViewController {
     @IBOutlet weak var tasksLabel: UILabel!
     @IBOutlet weak var navigateButton: UIButton!
     @IBOutlet weak var presentButton: UIButton!
     @IBOutlet weak var replaceButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var sampleInteractor: SampleInteractor? {
         return interactor as? SampleInteractor
@@ -59,10 +60,12 @@ class ViewController: ViperViewController, ViperRouter {
         tasksLabel.text = "Number of tasks: \(count)"
     }
     
-    func replace(_ viewController: UIViewController, options: UIViewAnimationOptions) {
-        if let delegate = UIApplication.shared.delegate as? AppDelegate {
-            delegate.replace(viewController, options: options)
-        }
+    func showActivityIndicator() {
+        self.activityIndicator.startAnimating()
+    }
+    
+    func hideActivityIndicator() {
+        self.activityIndicator.stopAnimating()
     }
 }
 

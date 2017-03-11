@@ -11,16 +11,8 @@ import Foundation
 open class ViperPresenter<V: ViperView> {
     open var view: V?
     
-    public init(view: V) {
+    public init(_ view: V) {
         self.view = view
-    }
-    
-    open func showActivityIndicator() {
-        view?.showActivityIndicator()
-    }
-    
-    open func hideActivityIndicator() {
-        view?.hideActivityIndicator()
     }
     
     open func presentAlert(title: String?, message: String? = nil,  okHandler: ((UIAlertAction) -> Void)? = nil) {
