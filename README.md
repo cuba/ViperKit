@@ -7,6 +7,7 @@ A Viper Design framework for iOS
 
 - Adds ViewControllers  which bind the ViewController lifcycles to the interactor
 - Has some commonly used presenter logic
+- Has some commonly used router logic
 
 ## Usage
 
